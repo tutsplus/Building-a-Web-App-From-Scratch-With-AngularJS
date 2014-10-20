@@ -5,4 +5,29 @@ AngularJS is an amazing front-end framework that has a very novel approach to bu
 
 Source files for the Tuts+ course: [Building a Web App From Scratch With AngularJS](https://courses.tutsplus.com/courses/)
 
+#### Installation
+
+Download the project from GitHub.
+
+It is assumed that you have already install node and bower. There are a couple of other compontents that you need to install.
+
+You should have a ~/.bowerrc file. If it does not exist, create it.
+
+The content should be something like this:
+
+	{
+	    "directory": "public/lib"
+	}
+
+* cd &lt;folder to install in>
+* mkdir contacts
+* cd contacts
+* npm install express
+* bower install angular
+* bower install bootstrap
+
+
+
+
+
 **Coming soon to Tuts+**
