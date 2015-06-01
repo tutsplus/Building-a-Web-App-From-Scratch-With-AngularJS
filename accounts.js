@@ -12,11 +12,17 @@ function hash (password) {
 }
 
 router
-    .use(bodyParser.urlencoded())
+    .use(bodyParser.urlencoded({
+        extended: true
+    }))
     .use(bodyParser.json())
-    .use(session({ secret: 'adshlqr3kqwefsadjklqrwefdsbzcjxcq4rewfadshj' }))
+    .use(session({
+        secret: 'adshlqr3kqwefsadjklqrwefdsbzcjxcq4rewfadshj',
+        resave: true,
+        saveUninitialized: true
+    }))
     .get('/login', function (req, res) {
-        res.sendfile('public/login.html');     
+        res.sendFile('public/login.html', {"root": "."});
     })
     .post('/login', function (req, res) {
         var user = {
