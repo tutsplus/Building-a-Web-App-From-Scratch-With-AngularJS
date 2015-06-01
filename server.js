@@ -11,7 +11,7 @@ app
         if (!req.user) {
             res.redirect('/login');
         } else {
-            res.sendfile('public/main.html');
+            res.sendFile('public/main.html', {"root": "."});
         }
     })
     .listen(3000);
